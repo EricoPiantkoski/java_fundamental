@@ -10,16 +10,14 @@ public class StudentAverage {
 
         System.out.println("insert the quantity of notes");
         int len = init.nextInt();
+        double average = 0;
 
         double[] notes = new double[len];
         for (double note:notes){
-            System.out.println("insert the "+ ArrayUtils.indexOf(notes, note)+"o note");
-            notes[ArrayUtils.indexOf(notes, note)] = init.nextDouble();
-        }
-
-        double average = 0;
-        for (double note: notes){
-            average += note;
+            int index = ArrayUtils.indexOf(notes, note);
+            System.out.println("insert the "+ (index+1) +"o note");
+            notes[index] = init.nextDouble();
+            average += notes[index];
         }
 
         System.out.println(average/len);
