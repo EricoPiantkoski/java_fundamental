@@ -19,7 +19,6 @@ public class StudentAverage {
             notes[index] = init.nextDouble();
             average += notes[index];
         }
-
         System.out.println(average/len);
 
         init.close();
